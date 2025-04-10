@@ -29,6 +29,13 @@
   --color-light-gray: #f2f2f2;
   --color-mask-gray: #c4c4c4;
 
+  --color-cupcake: #f0feeb;
+  --color-pizza: #e4f2f4;
+  --color-kebab: #eaeefa;
+  --color-kebab: #eaeefa;
+  --color-salmon: #f9eef3;
+  --color-doughnut: #f3f7d9;
+
   /* ! responsive font */
   --text-xs: clamp(0.75rem, 0.7vw, 0.875rem);
   --text-sm: clamp(0.875rem, 0.85vw, 1rem);
@@ -61,7 +68,7 @@
   }
 
   button {
-    @apply cursor-pointer font-medium;
+    @apply cursor-pointer font-medium disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   @media screen and (max-width: 640px) {
@@ -101,10 +108,10 @@
 
 @layer utilities {
   .default-button-avocado {
-    @apply transition-colors bg-avocado-500 hover:bg-avocado-500/70 text-white;
+    @apply transition-colors bg-avocado-500 hover:bg-avocado-500/80 text-white;
   }
   .default-button-light-gray {
-    @apply transition-colors bg-light-gray hover:bg-light-gray/70 text-foreground;
+    @apply transition-colors bg-light-gray hover:bg-light-gray/80 text-foreground;
   }
 }
 
@@ -143,7 +150,7 @@
     @apply md:block hidden;
   }
   .header__button--signup {
-    @apply rounded-3xl px-4 py-3 font-medium;
+    @apply rounded-3xl md:px-4 md:py-3 px-2 py-2 font-medium md:text-sm text-xs;
   }
 }
 
@@ -285,5 +292,44 @@
   }
   .hero-section__card-stars {
     @apply flex items-center gap-2;
+  }
+}
+
+/* ! receipt */
+@layer components {
+  .receipt-section {
+    @apply space-y-8;
+  }
+  .receipt-section__header {
+    @apply container;
+  }
+  .receipt-section__title {
+    @apply text-4xl space-x-2;
+  }
+  .receipt-section__highlight {
+    @apply text-avocado-500;
+  }
+  .receipt-slider {
+    @apply flex items-center gap-8 overflow-x-auto  pb-4 scroll-smooth;
+  }
+  .receipt-slider__item {
+    @apply px-6 py-3 rounded-xl gap-2 w-[230px] h-[175px] flex flex-col justify-center items-center flex-shrink-0 hover:scale-115 transition-transform duration-300 ease-in-out;
+  }
+
+  .receipt-slider__title {
+    @apply font-medium;
+  }
+
+  .receipt-actions {
+    @apply container flex items-end justify-end gap-4 mt-4;
+  }
+  .receipt-actions__button {
+    @apply flex items-center px-6 py-3 rounded-4xl;
+  }
+  .receipt-actions__icon-wrapper {
+    @apply w-[33px] h-[33px] flex justify-center items-center bg-white rounded-full mr-2;
+  }
+  .receipt-actions__icon {
+    @apply p-1;
   }
 }

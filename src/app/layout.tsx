@@ -21,7 +21,7 @@ export default function RootLayout({
         className={` ${rubik.className} antialiased`}
       >
         <Header />
-        <main>
+        <main className="space-y-12">
           {children}
 
         </main>

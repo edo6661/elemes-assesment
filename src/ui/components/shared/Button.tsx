@@ -5,11 +5,15 @@ const Button = ({
   children,
   className,
   color = 'default',
+  onClick,
+  disabled,
   ...props
 }: {
   children: React.ReactNode;
   className?: string;
   color?: 'default' | 'light-gray';
+  onClick?: () => void;
+  disabled?: boolean;
 }) => {
   const colorClasses = {
     'default': 'default-button-avocado',
@@ -20,6 +24,8 @@ const Button = ({
     <button
       className={cn(colorClasses[color], className)}
       {...props}
+      onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
