@@ -1,7 +1,7 @@
 import React from 'react'
 import FooterMenu from './FooterMenu'
 
-const FooterSmall = () => {
+const FooterMobile = () => {
   const menus = ["Home", "Promotions", "Others"]
 
   return (
@@ -15,4 +15,4 @@ const FooterSmall = () => {
     </div>)
 }
 
-export default FooterSmall
+export default FooterMobile

@@ -1,13 +1,14 @@
 
+import HeroSectionDekstop from '@/src/ui/components/home/HeroSectionDekstop'
+import HeroSectionMobile from '@/src/ui/components/home/HeroSectionMobile'
 import React from 'react'
 
 const HomePage = () => {
   return (
-    <div className='container'>
-      <p className=''>
-        test
-      </p>
-    </div>
+    <>
+      <HeroSectionDekstop />
+      <HeroSectionMobile />
+    </>
   )
 }
 

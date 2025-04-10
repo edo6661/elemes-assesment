@@ -1,13 +1,13 @@
 import React from 'react'
-import FooterLarge from './FooterLarge'
-import FooterSmall from './FooterSmall'
+import FooterDekstop from './FooterDekstop'
+import FooterMobile from './FooterMobile'
 
 const Footer = () => {
 
   return (
     <footer>
-      <FooterLarge />
-      <FooterSmall />
+      <FooterDekstop />
+      <FooterMobile />
     </footer>
   )
 }

@@ -26,6 +26,8 @@
   --color-scarlet-500: #e7462d;
 
   --color-dim-gray: #757575;
+  --color-light-gray: #f2f2f2;
+  --color-mask-gray: #c4c4c4;
 
   /* ! responsive font */
   --text-xs: clamp(0.75rem, 0.7vw, 0.875rem);
@@ -98,8 +100,11 @@
 }
 
 @layer utilities {
-  .default-button {
-    @apply bg-avocado-500 text-white transition-colors hover:bg-avocado-500/80;
+  .default-button-avocado {
+    @apply transition-colors bg-avocado-500 hover:bg-avocado-500/70 text-white;
+  }
+  .default-button-light-gray {
+    @apply transition-colors bg-light-gray hover:bg-light-gray/70 text-foreground;
   }
 }
 
@@ -224,5 +229,61 @@
   }
   .footer-menu__text {
     @apply text-dim-gray;
+  }
+}
+
+/* ! hero */
+@layer components {
+  .hero-section {
+    @apply md:grid grid-cols-2 hidden justify-between gap-8 container items-center;
+  }
+
+  .hero-section__content {
+    @apply max-w-[482px] space-y-8;
+  }
+  .hero-section__title {
+    @apply text-avocado-500 md:text-6xl text-5xl font-medium;
+  }
+  .hero-section__description {
+    @apply text-dim-gray;
+  }
+  .hero-section__buttons {
+    @apply flex items-center gap-6;
+  }
+  .hero-section__buttons > button {
+    @apply rounded-3xl px-6 py-3;
+  }
+
+  .hero-section__image-wrapper {
+    @apply relative;
+  }
+  .hero-section__image-container {
+    @apply flex items-center justify-center mx-auto;
+  }
+  .hero-section__image-container-mobile {
+    @apply flex items-center justify-center mx-auto;
+  }
+  .hero-section__image {
+    @apply border-32 border-mask-gray/20 rounded-full;
+  }
+  .hero-section__image-mobile {
+    @apply border-20 border-mask-gray/20 rounded-full;
+  }
+
+  .hero-section__card {
+    @apply flex gap-4 px-8 py-4 absolute left-0 bottom-0 bg-white/75 rounded-xl;
+  }
+  .hero-section__card-mobile {
+    @apply flex gap-4 px-8 py-4 absolute right-0 bottom-0 bg-white/75 rounded-xl;
+  }
+
+  .hero-section__card-title {
+    @apply font-medium;
+  }
+  .hero-section__card-category {
+    @apply text-dim-gray;
+  }
+  .hero-section__card-stars {
+    @apply flex items-center gap-2;
   }
 }

@@ -4,14 +4,21 @@ import React from 'react';
 const Button = ({
   children,
   className,
+  color = 'default',
   ...props
 }: {
   children: React.ReactNode;
   className?: string;
+  color?: 'default' | 'light-gray';
 }) => {
+  const colorClasses = {
+    'default': 'default-button-avocado',
+    'light-gray': 'default-button-light-gray',
+  };
+
   return (
     <button
-      className={cn('default-button', className)}
+      className={cn(colorClasses[color], className)}
       {...props}
     >
       {children}

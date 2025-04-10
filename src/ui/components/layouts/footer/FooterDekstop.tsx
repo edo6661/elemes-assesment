@@ -3,7 +3,7 @@ import FooterLeft from './FooterLeft'
 import FooterLinks from './FooterLinks'
 import FooterRight from './FooterRight'
 
-const FooterLarge = () => {
+const FooterDekstop = () => {
   const icons = ["/icons/white-mail.png", "/icons/phone.png", "/icons/instagram.png"]
   const categories = ["Cupcake", "Pizza", "Kebab", "Salmon", "Dougnut"]
   const aboutUs = ["About Us", "FAQ", "Report Problem"]
@@ -28,4 +28,4 @@ const FooterLarge = () => {
     </div>)
 }
 
-export default FooterLarge
+export default FooterDekstop
