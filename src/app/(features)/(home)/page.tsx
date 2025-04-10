@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div>
       <p className=''>
-        HomePage
+        test
       </p>
     </div>
   )
