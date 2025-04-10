@@ -1,15 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
+import Logo from '../../shared/Logo'
 
 const HeaderLogo = () => {
   return (
     <div className='header__logo'>
-      <Image
-        alt='Logo Elemes Group'
-        src="/images/logo.png"
-        width={207}
-        height={50}
-      />
+      <Logo />
     </div>)
 }
 
