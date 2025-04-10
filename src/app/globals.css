@@ -163,13 +163,13 @@
     @apply space-y-12 hidden md:block;
   }
   .footer-large__container {
-    @apply bg-avocado-100 rounded-3xl py-8 px-8 grid lg:grid-cols-4 grid-cols-3 gap-x-4 gap-y-12;
+    @apply bg-avocado-100 rounded-3xl py-8 px-8 grid grid-cols-4 gap-x-4 gap-y-12;
   }
   .footer-large__copyright {
     @apply text-center text-dim-gray;
   }
   .footer-left {
-    @apply space-y-8 lg:col-span-1 col-span-3 mx-auto;
+    @apply space-y-8  mx-auto;
   }
   .footer-left__first-wrapper {
     @apply space-y-5;
