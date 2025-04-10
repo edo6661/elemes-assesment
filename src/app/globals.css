@@ -138,7 +138,6 @@
   }
   .header__badge--text {
     @apply text-xs text-white font-bold;
-    font-size: var(--text-xs);
   }
   .header__link {
     @apply font-medium text-dim-gray;
@@ -307,7 +306,7 @@
     @apply container;
   }
   .receipt-section__title {
-    @apply md:text-4xl text-3xl space-x-2 font-medium;
+    @apply md:text-4xl text-3xl space-x-2 font-medium flex flex-col;
   }
   .receipt-section__highlight {
     @apply text-avocado-500;
@@ -346,16 +345,16 @@
     gap: 20px;
   }
   .trending-receipt-item {
-    @apply px-5 py-8 space-y-2;
+    @apply px-5 py-8 space-y-3 rounded-xl;
   }
   .trending-receipt-img {
     @apply rounded-lg;
   }
   .trending-receipt__title {
-    @apply text-lg font-medium;
+    @apply text-xl font-medium;
   }
   .trending-receipt__category {
-    @apply text-avocado-500 font-medium;
+    @apply text-avocado-500 font-medium text-lg;
   }
   .trending-receipt__stars {
     @apply flex items-center gap-2;
