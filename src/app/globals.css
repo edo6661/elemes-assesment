@@ -6,6 +6,7 @@
 }
 
 @theme {
+  /* ! custom colors from figma */
   --color-avocado-500: #8bac3e;
   --color-avocado-200: #f0feeb;
   --color-avocado-100: #f9fff6;
@@ -25,6 +26,17 @@
   --color-scarlet-500: #e7462d;
 
   --color-dim-gray: #757575;
+
+  /* ! responsive font */
+  --text-xs: clamp(0.75rem, 0.7vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.85vw, 1rem);
+  --text-base: clamp(1rem, 1vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.2vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 2vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 2.5vw, 2.25rem);
+  --text-4xl: clamp(2.25rem, 3vw, 3rem);
+  --text-5xl: clamp(3rem, 4vw, 4rem);
 }
 
 @theme inline {
@@ -32,9 +44,142 @@
   --color-foreground: var(--foreground);
   --font-rubik: var(--font-rubik);
 }
+/* ! base appearance */
+@layer base {
+  html {
+    font-size: 100%;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-rubik);
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-rubik);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: var(--text-5xl);
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: var(--text-3xl);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: var(--text-2xl);
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: var(--text-xl);
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: var(--text-lg);
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  small {
+    font-size: var(--text-sm);
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+  }
+
+  button {
+    @apply cursor-pointer font-medium;
+  }
+
+  @media screen and (max-width: 640px) {
+    :root {
+      --text-base: 0.875rem;
+    }
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 768px) {
+    :root {
+      --text-base: 0.9375rem;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    :root {
+      --text-base: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    :root {
+      --text-base: 1.0625rem;
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    :root {
+      --text-base: 1.125rem;
+    }
+  }
+}
+/* ! override util tailwind container */
+@utility container {
+  @apply mx-auto md:px-2 px-4 lg:px-12 max-w-full;
+}
+
+/* ! header */
+@layer components {
+  header {
+    @apply container py-8;
+  }
+  .header__nav {
+    @apply flex items-center justify-between gap-2;
+  }
+  .header__logo > img {
+    height: auto;
+    max-width: 100%;
+  }
+  .header__links {
+    @apply md:flex md:items-center hidden gap-4 lg:gap-8;
+  }
+  .header__link-item {
+    @apply relative;
+  }
+  .header__badge--hot {
+    @apply absolute -right-6 -top-8 px-4 py-0.5 bg-scarlet-500 rounded-xl;
+  }
+  .header__badge--text {
+    @apply text-xs text-white font-bold;
+    font-size: var(--text-xs);
+  }
+  .header__link {
+    @apply font-medium text-dim-gray;
+  }
+  .header__actions {
+    @apply flex items-center gap-2;
+  }
+  .header__button--login {
+    @apply md:block hidden;
+  }
+  .header__button--signup {
+    @apply rounded-3xl px-4 py-3 font-medium;
+  }
+}
+
+/* ! footer */
+@layer components {
 }
