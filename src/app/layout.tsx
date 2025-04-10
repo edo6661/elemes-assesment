@@ -4,33 +4,6 @@ import localFont from "next/font/local";
 import Header from "../ui/components/layouts/header/Header";
 import Footer from "../ui/components/layouts/footer/Footer";
 
-export const metadata: Metadata = {
-  title: "Home Page",
-  description: "This is the home page",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-
-      <body
-        className={` ${rubik.className} antialiased`}
-      >
-        <Header />
-        <main className="space-y-12">
-          {children}
-
-        </main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
-
 export const rubik = localFont({
   src: [
     {
@@ -63,3 +36,30 @@ export const rubik = localFont({
   ],
   variable: "--font-rubik",
 });
+
+export const metadata: Metadata = {
+  title: "Home Page",
+  description: "This is the home page",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+
+      <body
+        className={` ${rubik.className} antialiased`}
+      >
+        <Header />
+        <main className="space-y-12">
+          {children}
+
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

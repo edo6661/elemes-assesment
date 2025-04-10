@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dokumentasi GitHub: Assesment Elemes Group
 
-## Getting Started
+## Daftar Isi
 
-First, run the development server:
+- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+- [Prasyarat](#prasyarat)
+- [Penginstalan](#penginstalan)
+- [Menjalankan Program](#menjalankan-program)
+- [Perintah yang Tersedia](#perintah-yang-tersedia)
+- [Konvensi CSS](#konvensi-css)
+
+## Teknologi yang Digunakan
+
+Proyek ini dikembangkan menggunakan teknologi terbaru:
+
+- **Next.js 15.3.0** - Framework React dengan rendering sisi server
+- **React 19.0.0** - Library JavaScript untuk membangun antarmuka pengguna
+- **TypeScript 5** - Superset JavaScript dengan fitur tipe data statis
+- **Tailwind CSS v4** - Framework CSS utility-first
+- **Turbopack** - Bundler JavaScript yang cepat (digunakan dalam mode pengembangan)
+
+## Prasyarat
+
+Sebelum menginstal proyek ini, pastikan Anda memiliki:
+
+- Node.js (versi 18.18.0 atau lebih baru)
+- npm atau yarn atau pnpm sebagai package manager
+
+## Penginstalan
+
+Ikuti langkah-langkah berikut untuk menginstal proyek ini:
+
+1. Clone repositori dari GitHub
+
+   ```bash
+   git clone https://github.com/username/assesment-elemes-group.git
+   cd assesment-elemes-group
+   ```
+
+2. Instal semua dependensi
+   ```bash
+   npm install
+   ```
+
+## Menjalankan Program
+
+Setelah penginstalan selesai, Anda dapat menjalankan proyek dalam berbagai mode:
+
+### Mode Pengembangan
+
+Untuk menjalankan aplikasi dalam mode pengembangan dengan Turbopack:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000) dan akan otomatis memuat ulang ketika Anda melakukan perubahan pada kode.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Mode Produksi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Untuk membangun aplikasi untuk produksi:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Kemudian untuk menjalankan versi produksi:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Aplikasi produksi akan berjalan di [http://localhost:3000](http://localhost:3000).
 
-## Deploy on Vercel
+## Perintah yang Tersedia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Berikut daftar semua perintah yang tersedia dalam proyek:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - Menjalankan aplikasi dalam mode pengembangan dengan Turbopack
+- `npm run build` - Membangun aplikasi untuk produksi
+- `npm run start` - Menjalankan aplikasi yang sudah di-build dalam mode produksi
+- `npm run lint` - Menjalankan ESLint untuk memeriksa kode
+
+## Konvensi CSS
+
+Proyek ini menggunakan metode **BEM (Block Element Modifier)** untuk konvensi penamaan CSS, yang dikombinasikan dengan Tailwind CSS.

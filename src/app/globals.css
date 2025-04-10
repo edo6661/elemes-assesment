@@ -222,6 +222,9 @@
   .footer-right__contacts {
     @apply space-y-2;
   }
+  .footer-right__contact > p {
+    @apply font-medium;
+  }
   .footer-right__contact {
     @apply flex items-center gap-2;
   }
