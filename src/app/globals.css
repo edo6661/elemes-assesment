@@ -316,7 +316,7 @@
     @apply flex items-center gap-8 overflow-x-auto  pb-4 scroll-smooth;
   }
   .receipt-slider__item {
-    @apply px-6 py-3 rounded-xl gap-2 w-[230px] h-[175px] flex flex-col justify-center items-center flex-shrink-0 hover:scale-115 transition-transform duration-300 ease-in-out;
+    @apply px-6 py-3 rounded-xl gap-2 w-[230px] h-[175px] flex flex-col justify-center items-center flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out;
   }
 
   .receipt-slider__title {
