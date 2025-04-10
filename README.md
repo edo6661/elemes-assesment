@@ -33,7 +33,7 @@ Ikuti langkah-langkah berikut untuk menginstal proyek ini:
 1. Clone repositori dari GitHub
 
    ```bash
-   git clone https://github.com/username/assesment-elemes-group.git
+   git clone https://github.com/edo6661/elemes-assesment
    cd assesment-elemes-group
    ```
 
