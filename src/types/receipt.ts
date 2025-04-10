@@ -4,3 +4,8 @@ export interface Receipt {
   itemCount: number;
   color: string;
 }
+type ReceiptCategory = "Pizza" | "Kebab" | "Salmon" | "Cupcake" | "Doughnut";
+export interface TrendingReceipt extends Receipt {
+  star: number;
+  category: ReceiptCategory;
+}
