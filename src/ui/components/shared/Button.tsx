@@ -11,7 +11,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={cn('bg-avocado-500 text-white transition-colors hover:bg-avocado-500/80', className)}
+      className={cn('default-button', className)}
       {...props}
     >
       {children}

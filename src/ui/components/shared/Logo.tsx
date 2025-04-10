@@ -6,7 +6,7 @@ const Logo = () => {
     <Image
       alt='Logo Elemes Group'
       src="/images/logo.png"
-      width={207}
+      width={180}
       height={50}
     />)
 }
