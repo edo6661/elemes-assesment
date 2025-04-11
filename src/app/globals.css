@@ -267,7 +267,7 @@
     @apply relative;
   }
   .hero-section__image-container {
-    @apply flex items-center justify-center mx-auto;
+    @apply flex md:items-center md:justify-center md:mx-auto;
   }
   .hero-section__image-container-mobile {
     @apply flex items-center justify-center mx-auto;
@@ -283,7 +283,7 @@
     @apply flex gap-4 px-8 py-4 absolute left-0 bottom-0 bg-white/75 rounded-xl;
   }
   .hero-section__card-mobile {
-    @apply flex gap-4 px-8 py-4 absolute right-0 bottom-0 bg-white/75 rounded-xl;
+    @apply flex gap-4 px-8 py-4 absolute md:right-0 bottom-0 left-10 bg-white/75 rounded-xl;
   }
 
   .hero-section__card-title {
