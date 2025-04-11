@@ -59,7 +59,7 @@ const HeroSectionMobile = () => {
         I would think that conserving our natural resources should be a conservative position: Not to waste food, and not to throw away a lot of the food that we buy.
       </p>
       <div className="hero-section__buttons">
-        <Button>
+        <Button className='shadow-lg shadow-[#666BE259]'>
           Daftar Sekarang
         </Button>
 
