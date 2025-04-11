@@ -143,7 +143,7 @@
     @apply font-medium text-dim-gray;
   }
   .header__actions {
-    @apply flex items-center gap-2;
+    @apply flex items-center lg:gap-8 gap-4;
   }
   .header__button--login {
     @apply md:block hidden;
